@@ -1,0 +1,46 @@
+body {
+    width: 1920px;
+    height: 100%;
+    background-image: url("../image/BG/main.jpg") ;
+    position: relative;
+}
+
+
+#header > div {
+    float: left;
+    margin-top: 31px;
+    margin-bottom: 40px;
+    z-index: 200;
+}
+
+.h1 {
+    margin-left: 26px;
+}
+
+.lang {
+    margin-left: 20px;
+}
+
+.vol {
+    margin-left: 1371px;
+}
+
+.ham {
+    margin-left: 22px;
+}
+
+
+
+.head {
+    position: absolute;
+    left: 718px;
+    margin-top: 20px;
+    z-index: 300;
+
+}
+
+
+
+
+
+
