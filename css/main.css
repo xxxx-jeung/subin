@@ -410,11 +410,9 @@ body {
 #scene05 .close {
     position: fixed;
     right: 0px;
-    top: 0px;
-    z-index: 800;
 }
 
-
+/**
 #scene05 .text {
     position: absolute;
     left: 78px;
@@ -490,7 +488,7 @@ body {
     position: relative;
     height: 100%;
 }
-
+**/
 
 
 

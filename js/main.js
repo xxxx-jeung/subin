@@ -66,9 +66,8 @@ $(document).ready(function () {
             var contentHeight = $('.scroll_right').height(),
                 contents = $('.scroll_right .scroll_content').length;
 
-            top = (0 - (contentHeight * (contents/2 - 1)));
+            top = (0 - 2373);
                 // top = (0 - 6556);
-                
             $('.scroll_right').css('top', top + 'px');
         });
 
@@ -76,9 +75,8 @@ $(document).ready(function () {
             var contentHeight = $('.scroll_right').height(),
                 contents = $('.scroll_right .scroll_content').length;
                 
-            top = (0 - (contentHeight * (contents/2 - 1)));
+            top = (0 - 2373);
             // top = (0 - 6556);
-            debugger;
             $('.scroll_right').css('top', (top + $(window).scrollTop()) + 'px');
         });
 
