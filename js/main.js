@@ -15,7 +15,7 @@ $(document).ready(function () {
         zindex: 9999
     });
 
-    $('#menu').on('click',function () {
+    $('#header .ham').on('click',function () {
         $('#scene02').fadeIn();
     });
 
@@ -41,6 +41,51 @@ $(document).ready(function () {
     $('#scene04 .close').on('click',function () {
         $('#scene04').fadeOut();
     });
+
+    $('#cast .bryan').on('click',function () {
+        $('#scene05').fadeIn();
+        multiScroll();
+    });
+
+    $('#scene05 .close').on('click',function () {
+        $('#scene05').fadeOut();
+    });
+
+    $('#series .seri_01').on('click',function () {
+        $('#scene06').fadeIn();
+    });
+
+    $('#scene06 .close').on('click',function () {
+        $('#scene06').fadeOut();
+    });
+
+    function multiScroll(){
+        var top = 0;
+
+        $(document).ready(function () {
+            var contentHeight = $('.scroll_right').height(),
+                contents = $('.scroll_right .scroll_content').length;
+
+            top = (0 - (contentHeight * (contents/2 - 1)));
+                // top = (0 - 6556);
+                
+            $('.scroll_right').css('top', top + 'px');
+        });
+
+        $(window).resize(function () {
+            var contentHeight = $('.scroll_right').height(),
+                contents = $('.scroll_right .scroll_content').length;
+                
+            top = (0 - (contentHeight * (contents/2 - 1)));
+            // top = (0 - 6556);
+            debugger;
+            $('.scroll_right').css('top', (top + $(window).scrollTop()) + 'px');
+        });
+
+        $(window).scroll(function () {
+            $('.scroll_right').css('top', (top + $(window).scrollTop()) + 'px');
+        });
+    }
 
 });
 
@@ -79,3 +124,8 @@ $(function () {
         })
     })
 });
+
+(function ($) {
+    
+
+})(jQuery);

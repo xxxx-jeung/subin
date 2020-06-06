@@ -6,10 +6,9 @@ html, body {
 
 body {
     position: relative;
-    /* min-width: 1200px; */
-    background-image: url("../image/BG/main.jpg") ;
-    width: 1920px;
-    background-repeat: no-repeat;
+    /* width: 1920px; */
+    min-width: 1200px;
+    background: url("../image/BG/main.jpg") no-repeat;
 }
 
 
@@ -34,6 +33,8 @@ body {
 /*    position: absolute;*/
 /*    left: 50%*/
 /*}*/
+
+
 
 #header > div {
     /*position: absolute;*/
@@ -392,10 +393,128 @@ body {
     z-index: 600;
 }
 
-/*#scene02 {*/
-/*    width: 6000px;*/
-/*    height: 980px;*/
-/*    background: orange;*/
-/*    display: none;*/
-/*    z-index: 9999;*/
-/*}*/
+
+
+
+#scene05 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 1920px;
+    height: 3278px;
+    background: black url("../image/cast/cast&gallary-BG.jpg") no-repeat;
+    display: none;
+    z-index: 600;
+}
+
+#scene05 .close {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 800;
+}
+
+
+#scene05 .text {
+    position: absolute;
+    left: 78px;
+    top: 273px;
+    width: 551px;
+    height: 2892px;
+}
+
+#scene05 .text .left1 {
+    margin-bottom: 90px;
+}
+
+
+#scene05 .text .left2 {
+    margin-bottom: 252px;
+}
+
+#scene05 .text .left3 {
+    margin-bottom: 208px;
+}
+
+#scene05 .text .left4 {
+    margin-bottom: 190px;
+}
+
+
+
+#scene05 .gallery {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1153px;
+    height: 3278px;
+}
+
+#scene05 .gallery .right {
+    float: left;
+}
+
+#scene05 .gallery .left {
+    float: right;
+}
+
+
+
+#scene05 .king {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1153px;
+    z-index: 700;
+}
+
+#scene05 .king .king_text {
+    margin-bottom: 20px;
+}
+
+#scene05 .scroll_left {
+    display: inline-block;
+    width: 767px;
+    height: 3278px;
+}
+
+#scene05 .scroll_right {
+    position:fixed;
+    top:0;
+    right:0;
+    width: 1153px;
+    height: 3278px;
+}
+
+#scene05 .scroll_content {
+    position: relative;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+#scene06 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 6430px;
+    height: 980px;
+    background: black;
+    display: none;
+    z-index: 600;
+}
+
+button.ytp-large-play-button {
+    background-color: red;
+    border-radius: 50px;
+}
+
+button.ytp-large-play-button svg { 
+    display: none; 
+} 
+

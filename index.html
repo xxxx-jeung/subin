@@ -16,210 +16,324 @@
     <script src="./js/plugin/jquery.nicescroll.min.js"></script>
     <script src="./js/plugin/jquery.slides.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="./js/plugin/glitch-effect-script.js"></script>
     <!--[if It IE 9] <script src="js/respond.min.js"></script> <[endif]-->
 
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="favicon" href="" type="image/x-icon">
-    <style>
-        * {
-            box-sizing: content-box;
-        }
-        .header_nav{
-            /* width: 1920px;
-            height: 100px; */
-            display: flex;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-        .header_nav > li {
-            padding: 20px;
-        }
-
-        .header_nav > li:nth-child(2) { flex-grow: 2;}
-    </style>
 </head>
+<style>
+    /* youtube플레이어 화면에 꽉차게 하는 css */
+    /* #youTubePlayer1 {position:relative;width:100%;padding-bottom:56.25%;}
+    #youTubePlayer1 iframe {position:absolute;width:100%;height:100%;} */
+</style>
 <body>
 
 
-<!-- <header id="header" class="clearfix">
-    <div class="h1"><a href="#"><img src="image/main_header/main_h1.jpg" alt="logo"></a></div>
-    <div class="lang"><a href="#"><img src="image/main_header/main_lang.png" alt="logo"></a></div>
-    <div class="vol"><a href="#"><img src="image/main_header/main_vol.png" alt="volume"></a></div>
-    <div class="ham"><a href="#"><img src="image/main_header/main_ham.png" alt="hamburger"></a> </div>
-</header> -->
-
-<header>
-    <nav>
-        <ul class="header_nav">
-            <li><a href="#">  <img src="./image/main_header/main_h1.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./image/main_header/main_lang.png" alt=""></a></li>
-            <li><a href="#"> <img src="./image/main_header/main_vol.png" alt=""></a></li>
-            <li><a id="menu" href="#"> <img src="./image/main_header/main_ham.png" alt=""></a></li>
-        </ul>
-    </nav>
+<header id="header" class="clearfix">
+    <div class="h1"><a href="#"><img src="./image/main_header/main_h1.jpg" alt="logo"></a></div>
+    <div class="lang"><a href="#"><img src="./image/main_header/main_lang.png" alt="logo"></a></div>
+    <div class="vol"><a href="#"><img src="./image/main_header/main_vol.png" alt="volume"></a></div>
+    <div class="ham"><a href="#"><img src="./image/main_header/main_ham.png" alt="hamburger"></a> </div>
 </header>
 
-<div class="head"><a href="#"><img src="image/BG/main-head_17.png"></a></div>
+
+<div class="head"><a href="#"><img src="./image/BG/main-head_17.png"></a></div>
 
 
 <div class="scrollBox">
     <div class="wrap">
-        <section id="scene01">  <!--메인-->
+        <section id="scene01" class="popup">  <!--메인-->
 
             <article id="series" class="clearfix">
-                <div class="title1"><a href="#"><img src="image/main_btn/main_but_serise.png" alt="series"></a></div>
-                <div class="b1"><a href="#"><img src="image/main_btn/main_but_seri_01.png" alt="series"></a></div>
-                <div class="b1"><a href="#"><img src="image/main_btn/main_but_seri_02.png" alt="series"></a></div>
-                <div class="b1"><a href="#"><img src="image/main_btn/main_but_seri_03.png" alt="series"></a></div>
-                <div class="b1"><a href="#"><img src="image/main_btn/main_but_seri_04.png" alt="series"></a></div>
-                <div class="b2"><a href="#"><img src="image/main_btn/main_but_seri_05.png" alt="series"></a></div>
+                <div class="title1"><a href="#"><img src="./image/main_btn/main_but_serise.png" alt="series"></a></div>
+                <div class="b1 seri_01"><a href="#"><img src="./image/main_btn/main_but_seri_01.png" alt="series"></a></div>
+                <div class="b1"><a href="#"><img src="./image/main_btn/main_but_seri_02.png" alt="series"></a></div>
+                <div class="b1"><a href="#"><img src="./image/main_btn/main_but_seri_03.png" alt="series"></a></div>
+                <div class="b1"><a href="#"><img src="./image/main_btn/main_but_seri_04.png" alt="series"></a></div>
+                <div class="b2"><a href="#"><img src="./image/main_btn/main_but_seri_05.png" alt="series"></a></div>
             </article>
 
             <article id="cast" class="clearfix">
-                <div class="cast1"><a href="#"><img src="image/main_btn/main_but_cast.png" alt="series"></a></div>
-                <div class="cb1"><a href="#"><img src="image/main_btn/main_cast.jpg" alt="series"></a> </div>
-                <div class="cb2"><a href="#"><img src="image/main_btn/main_but_cast_01.png" alt="series"></a></div>
-                <div class="cb2"><a href="#"><img src="image/main_btn/main_but_cast_02.png" alt="series"></a></div>
-                <div class="cb2"><a href="#"><img src="image/main_btn/main_but_cast_03.png" alt="series"></a></div>
-                <div class="b3"><a href="#"><img src="image/main_btn/main_but_cast_04.png" alt="series"></a></div>
-                <div class="b2"><a href="#"><img src="image/main_btn/main_but_cast_05.png" alt="series"></a></div>
+                <div class="cast1"><a href="#"><img src="./image/main_btn/main_but_cast.png" alt="series"></a></div>
+                <div class="cb1"><a href="#"><img src="./image/main_btn/main_cast.jpg" alt="series"></a> </div>
+                <div class="cb2 bryan"><a href="#"><img src="./image/main_btn/main_but_cast_01.png" alt="series"></a></div>
+                <div class="cb2"><a href="#"><img src="./image/main_btn/main_but_cast_02.png" alt="series"></a></div>
+                <div class="cb2"><a href="#"><img src="./image/main_btn/main_but_cast_03.png" alt="series"></a></div>
+                <div class="b3"><a href="#"><img src="./image/main_btn/main_but_cast_04.png" alt="series"></a></div>
+                <div class="b2"><a href="#"><img src="./image/main_btn/main_but_cast_05.png" alt="series"></a></div>
             </article>
 
 
             <article id="spin_off" class="clearfix">
-                <div class="spin1"><a href="#"><img src="image/main_btn/main_but_spinoff.png" alt="series"></a></div>
-                <div class="spb1"><a href="#"><img src="image/main_btn/main_but_spinoff_01.png" alt="series"></a></div>
-                <div class="spb2"><a href="#"><img src="image/main_btn/main_but_spinoff_03.png" alt="series"></a></div>
-                <div class="spb2"><a href="#"><img src="image/main_btn/main_but_spinoff_04.png" alt="series"></a></div>
-                <div class="b2"><img src="image/main_btn/main_spinoff.jpg" alt="series"></div>
+                <div class="spin1"><a href="#"><img src="./image/main_btn/main_but_spinoff.png" alt="series"></a></div>
+                <div class="spb1"><a href="#"><img src="./image/main_btn/main_but_spinoff_01.png" alt="series"></a></div>
+                <div class="spb2"><a href="#"><img src="./image/main_btn/main_but_spinoff_03.png" alt="series"></a></div>
+                <div class="spb2"><a href="#"><img src="./image/main_btn/main_but_spinoff_04.png" alt="series"></a></div>
+                <div class="b2"><img src="./image/main_btn/main_spinoff.jpg" alt="series"></div>
             </article>
 
             <article id="music" class="clearfix">
-                <div class="music1"><a href="#"><img src="image/main_btn/main_but_music.png" alt="series"></a></div>
-                <div class="none"><img src="image/main_btn/main_music.jpg" alt="series"></div>
-                <div class="mb1"><a href="#"><img src="image/main_btn/main_but_music_01.png" alt="series"></a></div>
-                <div class="mb1"><a href="#"><img src="image/main_btn/main_but_music_02.png" alt="series"></a></div>
-                <div class="mb1"><a href="#"><img src="image/main_btn/main_but_music_03.png" alt="series"></a></div>
+                <div class="music1"><a href="#"><img src="./image/main_btn/main_but_music.png" alt="series"></a></div>
+                <div class="none"><img src="./image/main_btn/main_music.jpg" alt="series"></div>
+                <div class="mb1"><a href="#"><img src="./image/main_btn/main_but_music_01.png" alt="series"></a></div>
+                <div class="mb1"><a href="#"><img src="./image/main_btn/main_but_music_02.png" alt="series"></a></div>
+                <div class="mb1"><a href="#"><img src="./image/main_btn/main_but_music_03.png" alt="series"></a></div>
             </article>
 
         </section>
 
-        <div id="scene02"> <!--햄버거 메뉴-->
+        <div id="scene02" class="popup"> <!--햄버거 메뉴-->
             <article class="hamheader">
-                <div class="hambtn"><a href="#"><img src="image/ham%20menu/ham_vol.png" alt="volume"> </a> </div>
-                <div class="close"><a href="#"><img src="image/ham%20menu/main-hammenu_05.png" alt="pop up off"> </a> </div>
+                <div class="hambtn"><a href="#"><img src="./image/ham%20menu/ham_vol.png" alt="volume"> </a> </div>
+                <div class="close"><a href="#"><img src="./image/ham%20menu/main-hammenu_05.png" alt="pop up off"> </a> </div>
             </article>
             <article class="hamfooter">
-                <div class="blog"><a href="#"><img src="image/ham%20menu/ham_amc.png" alt="link_blog"> </a> </div>
-                <div class="netflex"><a href="#"><img src="image/ham%20menu/ham_netflix.png" alt="link_netflex"> </a> </div>
-                <div class="facebook"><a href="#"><img src="image/ham%20menu/ham_face.png" alt="link_facebook"> </a> </div>
-                <div class="youtube"><a href="#"><img src="image/ham%20menu/main-hammenu_66.png" alt="link_youtube"> </a> </div>
-                <div class="twitter"><a href="#"><img src="image/ham%20menu/ham_twit.png" alt="link_twitter"> </a> </div>
+                <div class="blog"><a href="#"><img src="./image/ham%20menu/ham_amc.png" alt="link_blog"> </a> </div>
+                <div class="netflex"><a href="#"><img src="./image/ham%20menu/ham_netflix.png" alt="link_netflex"> </a> </div>
+                <div class="facebook"><a href="#"><img src="./image/ham%20menu/ham_face.png" alt="link_facebook"> </a> </div>
+                <div class="youtube"><a href="#"><img src="./image/ham%20menu/main-hammenu_66.png" alt="link_youtube"> </a> </div>
+                <div class="twitter"><a href="#"><img src="./image/ham%20menu/ham_twit.png" alt="link_twitter"> </a> </div>
             </article>
-            
+
             <article class="ham_series1">
-                <div class="series"><a href="#"><img src="image/ham%20menu/ham_series_01.png" alt="title"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_series_S1.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_series_S2.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_series_S3.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_series_S4.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_series_S5.png" alt="season1"> </a> </div>
+                <div class="series"><a href="#"><img src="./image/ham%20menu/ham_series_01.png" alt="title"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_series_S1.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_series_S2.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_series_S3.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_series_S4.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_series_S5.png" alt="season1"> </a> </div>
             </article>
-            
+
             <article class="ham_series2">
-                <div class="series"><a href="#"><img src="image/ham%20menu/ham_spinoff_01.png" alt="title"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_spinoff_S1.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_spinoff_S2.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_spinoff_S3.png" alt="season1"> </a> </div>
-            
+                <div class="series"><a href="#"><img src="./image/ham%20menu/ham_spinoff_01.png" alt="title"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_spinoff_S1.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_spinoff_S2.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_spinoff_S3.png" alt="season1"> </a> </div>
+
             </article>
-            
+
             <article class="ham_series3">
-                <div class="series"><a href="#"><img src="image/ham%20menu/ham_cast_01.png" alt="title"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_cast_S1.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_cast_S2.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_cast_S3.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_cast_S4.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_cast_S5.png" alt="season1"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_cast_S6.png" alt="season1"> </a> </div>
+                <div class="series"><a href="#"><img src="./image/ham%20menu/ham_cast_01.png" alt="title"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_cast_S1.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_cast_S2.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_cast_S3.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_cast_S4.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_cast_S5.png" alt="season1"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_cast_S6.png" alt="season1"> </a> </div>
             </article>
-            
+
             <article class="ham_series4">
-                <div class="series"><a href="#"><img src="image/ham%20menu/ham_music_01.png" alt="title"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_music_S1.png" alt="all"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_music_S2.png" alt="spin"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/ham%20menu/ham_music_S3.png" alt="movie"> </a> </div>
-            </article>            
+                <div class="series"><a href="#"><img src="./image/ham%20menu/ham_music_01.png" alt="title"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_music_S1.png" alt="all"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_music_S2.png" alt="spin"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/ham%20menu/ham_music_S3.png" alt="movie"> </a> </div>
+
+            </article>
+
+
         </div>
 
-        <div id="scene03">
-            <article class="spin popup">
-                <div class="fix"><a href="#"><img src="image/about/about-01_03_section.png" alt="comic"></a> </div>
-                <div class="close"><a href="#"><img src="image/close.png" alt="close"></a> </div>
+        <div id="scene03" class="popup">
+            <article class="spin">
+                <div class="fix" style="filter: url(#filter);"><a href="#"><img src="./image/about/about-01_03_section.png" alt="comic"></a> </div>
+                <div class="close"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
             </article>
 
             <article class="article">
-                <div class="b1"><a href="#"><img src="image/about/about-01_article_1.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about/about-01_article_2.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about/about-01_article_3.png" alt="article"> </a> </div>
-                <div class="b2"><a href="#"><img src="image/about/about-01_article_4.png" alt="article"> </a> </div>
-                <div class="b2"><a href="#"><img src="image/about/about-01_article_5.png" alt="article"> </a> </div>
-                <div class="b2"><a href="#"><img src="image/about/about-01_article_6.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about/about-01_article_1.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about/about-01_article_2.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about/about-01_article_3.png" alt="article"> </a> </div>
+                <div class="b2"><a href="#"><img src="./image/about/about-01_article_4.png" alt="article"> </a> </div>
+                <div class="b2"><a href="#"><img src="./image/about/about-01_article_5.png" alt="article"> </a> </div>
+                <div class="b2"><a href="#"><img src="./image/about/about-01_article_6.png" alt="article"> </a> </div>
             </article>
 
             <article class="line">
-                <div class="lineB"><a href="#"><img src="image/about/about-01_line-B.png" alt="bold"> </a> </div>
-                <div class="line1"><a href="#"><img src="image/about/about-01_line-1.png" alt="bold"> </a> </div>
-                <div class="line2"><a href="#"><img src="image/about/about-01_line-2.png" alt="bold"> </a> </div>
-                <div class="line3"><a href="#"><img src="image/about/about-01_line-3.png" alt="bold"> </a> </div>
+                <div class="lineB"><a href="#"><img src="./image/about/about-01_line-B.png" alt="bold"> </a> </div>
+                <div class="line1"><a href="#"><img src="./image/about/about-01_line-1.png" alt="bold"> </a> </div>
+                <div class="line2"><a href="#"><img src="./image/about/about-01_line-2.png" alt="bold"> </a> </div>
+                <div class="line3"><a href="#"><img src="./image/about/about-01_line-3.png" alt="bold"> </a> </div>
             </article>
 
         </div>
 
-        <div id="scene04">
-            <article class="spin popup">
-                <div class="fix"><a href="#"><img src="image/about2/about-02_main.png" alt="main"></a> </div>
-                <div class="close"><a href="#"><img src="image/close.png" alt="close"></a> </div>
+        <div id="scene04" class="popup">
+            <article class="spin">
+                <div class="fix"><a href="#"><img src="./image/about2/about-02_main.png" alt="main"></a> </div>
+                <div class="close"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
             </article>
 
             <article class="article">
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-01.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-02.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-03.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-04.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-05.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-06.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-07.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-08.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-09.png" alt="article"> </a> </div>
-                <div class="b1"><a href="#"><img src="image/about2/about-02_article-10.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-01.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-02.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-03.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-04.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-05.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-06.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-07.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-08.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-09.png" alt="article"> </a> </div>
+                <div class="b1"><a href="#"><img src="./image/about2/about-02_article-10.png" alt="article"> </a> </div>
 
             </article>
 
             <article class="line">
-                <div class="lineB"><a href="#"><img src="image/about2/about-02_line-B.png" alt="bold"> </a> </div>
-                <div class="line1"><a href="#"><img src="image/about2/about-02_line-1.png" alt="bold"> </a> </div>
-                <div class="line2"><a href="#"><img src="image/about2/about-02_line-2.png" alt="bold"> </a> </div>
-                <div class="line3"><a href="#"><img src="image/about2/about-02_line-3.png" alt="bold"> </a> </div>
-                <div class="line3"><a href="#"><img src="image/about2/about-02_line-4.png" alt="bold"> </a> </div>
+                <div class="lineB"><a href="#"><img src="./image/about2/about-02_line-B.png" alt="bold"> </a> </div>
+                <div class="line1"><a href="#"><img src="./image/about2/about-02_line-1.png" alt="bold"> </a> </div>
+                <div class="line2"><a href="#"><img src="./image/about2/about-02_line-2.png" alt="bold"> </a> </div>
+                <div class="line3"><a href="#"><img src="./image/about2/about-02_line-3.png" alt="bold"> </a> </div>
+                <div class="line3"><a href="#"><img src="./image/about2/about-02_line-4.png" alt="bold"> </a> </div>
 
             </article>
 
         </div>
 
-        <div id="scene05">
+        <!-- Bryan Popup-->
+        <div id="scene05" class="popup">
+            <!-- <div style="position: relative;"> -->
+                <!-- left -->
+                <section class="scroll_left">
+                    <article class="text">
+                        <div class="left1"><a href="#"><img src="./image/cast/cast&gallary-t1.png" alt="title"> </a> </div>
+                        <div class="left2"><a href="#"><img src="./image/cast/cast&gallary-t2.png" alt="text"> </a> </div>
+                        <div class="left3"><a href="#"><img src="./image/cast/cast&gallary-t3.png" alt="text"> </a> </div>
+                        <div class="left4"><a href="#"><img src="./image/cast/cast&gallary-t4.png" alt="text"> </a> </div>
+                        <div class="left5"><a href="#"><img src="./image/cast/cast&gallary-t5.png" alt="text"> </a> </div>
+                    </article>
+                </section>
+                <!-- //left -->
 
+                <!-- right -->
+                <section class="scroll_right">
+                        <article class="gallery">
+                            <div class="right scroll_content"><a href="#"><img src="./image/cast/cast&gallary-m1.jpg" alt="Photo"> </a> </div>
+                            <div class="right scroll_content"><a href="#"><img src="./image/cast/cast&gallary-m2.png" alt="Photo"> </a> </div>
+                            <div class="left scroll_content"><a href="#"><img src="./image/cast/cast&gallary-t6.png" alt="text"> </a> </div>
+                            <div class="right scroll_content"><a href="#"><img src="./image/cast/cast&gallary-m3.jpg" alt="Photo"> </a> </div>
+                            <div class="right scroll_content"><a href="#"><img src="./image/cast/cast&gallary-m4.jpg" alt="Photo"> </a> </div>
+                            <div class="right scroll_content"><a href="#"><img src="./image/cast/cast&gallary-m5.jpg" alt="Photo"> </a> </div>
+                            <div class="right scroll_content"><a href="#"><img src="./image/cast/cast&gallary-m6.jpg" alt="Photo"> </a> </div>
+                        </article>
 
+                        <article class="king">
+                            <div class="king_text scroll_content"><a href="#"><img src="./image/cast/cast&gallary-01-king1.png" alt="text"> </a> </div>
+                            <div class="king_text scroll_content"><a href="#"><img src="./image/cast/cast&gallary-01-king2.png" alt="text"> </a> </div>
+                            <div class="king_text scroll_content"><a href="#"><img src="./image/cast/cast&gallary-01-king3.png" alt="text"> </a> </div>
+                        </article>
+                </section>
+                <!-- //right -->
+
+                <div class="close"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
+            <!-- </div> -->
+        </div>
+        <!-- //Bryan Popup-->
+            
+        <div id="scene06" class="popup">
+            <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+                <defs>
+                    <filter id="filter">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+                        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+                    </filter>
+                </defs>
+            </svg>
+
+            <div class="close" style="position: fixed;"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
+            <section class="1st_floor" style="display: flex;">
+                <article class="scene06_main">
+                    <div class="scene06_div_main"><a href="#"><img src="./image/episode/episode-1-1.png" alt="main"> </a> </div>
+                </article>
+
+                <article class="scene06_title">
+                    <div class="scene06_div_title"><a href="#"><img src="./image/episode/episode-heiesnberg.png" alt="title"> </a> </div>
+                    <div class="scene06_div_title"><a href="#"><img src="./image/episode/episode-hei-by.png" alt="title"> </a> </div>
+                    <div class="scene06_div_title"><a href="#"><img src="./image/episode/episode-hei-text.png" alt="title_text"> </a> </div>
+                </article>
+
+                <article class="scene06_photo3">
+                    <div class="scene06_div_photo3"><a href="#"><img src="./image/episode/episode-3-1.png" alt="photo"> </a> </div>
+                    <div class="scene06_div_photo3"><a href="#"><img src="./image/episode/episode-3-2.png" alt="photo"> </a> </div>
+                    <div class="scene06_div_photo3"><a href="#"><img src="./image/episode/episode-3-3.png" alt="photo"> </a> </div>
+                </article>
+
+                <article class="scene06_text">
+                    <div class="scene06_div_text"><a href="#"><img src="./image/episode/episode-bluesky.png" alt="text"> </a> </div>
+                </article>
+
+                <article class="scene06_jessi">
+                    <div class="scene06_div_jessi"><a href="#"><img src="./image/episode/episode-jessi-pure.png" alt="photo"> </a> </div>
+                    <div class="scene06_div_jessi"><a href="#"><img src="./image/episode/episode-jessi-text.png" alt="text"> </a> </div>
+                </article>
+
+                <article class="scene06_photo2">
+                    <div class="scene06_div_photo2_1" style="filter: url(#filter);"><a href="#"><img src="./image/episode/episode-2-1.png" alt="photo"> </a> </div>
+                    <!-- <div class="scene06_div_photo2"><a href="#"><img src="./image/episode/episode-2-2.png" alt="photo"> </a> </div> -->
+                    <div class="scene06_div_photo2" style="height: 495.984px">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HhesaQXLuRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </article>
+            </section>
         </div>
 
     </div><!--    wrap end-->
 </div>
 
 <script>
-    includeHTML();
+    /*
+    <div id="youTubePlayer1"></div><!-- 플레이어를 불러올 영역-->
+    <div class="btn_play">시작</div><!-- 시작버튼-->
+    <div class="btn_stop">정지</div><!-- 정지버튼-->
+    <div class="btn_pause">일시정지</div> <!-- 일시정지버튼-->
+
+
+    // youtube API 불러옴
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/HhesaQXLuRY";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 플레이어변수 설정
+    var youTubePlayer1;
+
+    function onYouTubeIframeAPIReady() {
+        youTubePlayer1 = new YT.Player('youTubePlayer1', {
+            width: '1000',
+            height: '563',
+            videoId: 'HhesaQXLuRY',
+            playerVars: {rel: 0},//추천영상 안보여주게 설정
+            events: {
+            'onReady': onPlayerReady, //로딩할때 이벤트 실행
+            'onStateChange': onPlayerStateChange //플레이어 상태 변화시 이벤트실행
+            }
+        });//youTubePlayer1셋팅
+    }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();//자동재생
+        //로딩할때 실행될 동작을 작성한다.
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            //플레이어가 재생중일때 작성한 동작이 실행된다.
+        }
+    }
+    
+    $(document).ready(function () {
+        $(".btn_play").on("click", function () {
+            youTubePlayer1.playVideo();//재생
+        });
+        $(".btn_stop").on("click", function () {
+            youTubePlayer1.stopVideo();//정지
+        });
+        $(".btn_pause").on("click", function () {
+            youTubePlayer1.pauseVideo();//일시정지
+        });
+    });
+    */
 </script>
-
-
 
 </body>
 </html>
