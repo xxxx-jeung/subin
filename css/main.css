@@ -1,43 +1,20 @@
 @charset "utf-8";
 html, body {
     height: 100%;
-    /*overflow-y: hidden;*/
+}
+
+
+body::-webkit-scrollbar {
+    display: none !important;
 }
 
 body {
     position: relative;
-    /* width: 1920px; */
-    min-width: 1200px;
+    width: 1920px;
     background: url("../image/BG/main.jpg") no-repeat;
 }
 
-
-
-/*.scrollBox {*/
-/*    min-width: 1200px;*/
-/*    height: 100%;*/
-/*    position: relative*/
-/*}*/
-
-/*.scrollBox .wrap {*/
-/*    min-width: 1200px;*/
-/*    position: relative;*/
-/*    !*overflow: hidden*!*/
-/*}*/
-
-/*.scrollBox .wrap > div {*/
-/*    position: relative*/
-/*}*/
-
-/*.scrollBox .wrap .objs > li {*/
-/*    position: absolute;*/
-/*    left: 50%*/
-/*}*/
-
-
-
 #header > div {
-    /*position: absolute;*/
     float: left;
     margin-top: 31px;
     margin-bottom: 40px;
@@ -407,88 +384,20 @@ body {
     z-index: 600;
 }
 
+#scene05 ::-webkit-scrollbar {
+
+    display:none;
+
+}
+
+
 #scene05 .close {
     position: fixed;
     right: 0px;
-}
-
-/**
-#scene05 .text {
-    position: absolute;
-    left: 78px;
-    top: 273px;
-    width: 551px;
-    height: 2892px;
-}
-
-#scene05 .text .left1 {
-    margin-bottom: 90px;
+    z-index: 900;
 }
 
 
-#scene05 .text .left2 {
-    margin-bottom: 252px;
-}
-
-#scene05 .text .left3 {
-    margin-bottom: 208px;
-}
-
-#scene05 .text .left4 {
-    margin-bottom: 190px;
-}
-
-
-
-#scene05 .gallery {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 1153px;
-    height: 3278px;
-}
-
-#scene05 .gallery .right {
-    float: left;
-}
-
-#scene05 .gallery .left {
-    float: right;
-}
-
-
-
-#scene05 .king {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 1153px;
-    z-index: 700;
-}
-
-#scene05 .king .king_text {
-    margin-bottom: 20px;
-}
-
-#scene05 .scroll_left {
-    display: inline-block;
-    width: 767px;
-    height: 3278px;
-}
-
-#scene05 .scroll_right {
-    position:fixed;
-    top:0;
-    right:0;
-    width: 1153px;
-    height: 3278px;
-}
-
-#scene05 .scroll_content {
-    position: relative;
-    height: 100%;
-}
-**/
 
 
 
@@ -501,18 +410,133 @@ body {
     left: 0px;
     top: 0px;
     width: 6430px;
-    height: 980px;
+    height: 100%;
     background: black;
     display: none;
     z-index: 600;
+    overflow-y: hidden;
+
 }
 
-button.ytp-large-play-button {
-    background-color: red;
-    border-radius: 50px;
+#scene06 .close {
+    position: fixed;
 }
 
-button.ytp-large-play-button svg { 
-    display: none; 
-} 
+#scene06  .floor1 {
+    display: flex;
+}
 
+#scene06  .floor1 .scene06_main {
+    width: 1920px;
+    height: 980px;
+    background: url("../image/episode/episode-1-1.png") ;
+}
+
+
+#scene06  .floor1 .scene06_main_text {
+    margin: 97px 0 300px 117px;
+
+}
+
+#scene06  .floor1 .scene06_main_title {
+    margin: 0 0 93px 117px;
+}
+
+
+
+#scene06 .scene06_title {
+    width: 960px;
+    height: 100%;
+}
+
+
+#scene06 .scene06_title .scene06_title_heiesnberg {
+    margin: 200px 187px 62px 137px;
+}
+
+#scene06 .scene06_title .scene06_title_hei-by {
+    margin: 0 187px 105px 137px;
+}
+
+#scene06 .scene06_title .scene06_title_title{
+    margin: 0 187px 0 137px;
+}
+
+
+
+#scene06 .scene06_text {
+    width: 550px;
+    height: 100%;
+    background: #00fda1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#scene06 .scene06_text .scene06_div_text1{
+    margin-top: 88px;
+}
+
+#scene06 .scene06_text .scene06_div_text3{
+    margin-top: auto;
+    margin-bottom: 88px;
+}
+
+
+#scene06 .scene06_text .black_box {
+    background-color: black;
+    width: 301px;
+    height: 4px;
+    margin: 48px 0;
+}
+
+
+#scene06 .scene06_jessi {
+    width: 1504px;
+    height: 100%;
+    background: url("../image/episode/episode-jessi.png") no-repeat;
+}
+
+#scene06 .scene06_jessi .scene06_jessi_pure{
+    margin-top: 573px;
+}
+
+#scene06 .scene06_jessi .scene06_jessi_text{
+    margin-top: 94px;
+}
+
+.king_text3_on {
+    /* King 맨아래 */
+    left: 0px;
+    transition: all 2s;
+    z-index: ;
+}
+
+.king_text2_on {
+    /* Of 중간 */
+    left: 0px;
+    transition: all 3s;
+}
+
+.king_text1_on {
+    /* King 맨위 */
+    left: 0px;
+    transition: all 4s;
+}
+
+.king_text3_off {
+    left: -2360.5px;
+    transition: all 2s;
+}
+
+.king_text2_off {
+    left: -2360.5px;
+    transition: all 3s;
+}
+
+.king_text1_off {
+    left: -2360.5px;
+    transition: all 4s;
+}

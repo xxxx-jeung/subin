@@ -15,19 +15,17 @@
     <script src="./js/plugin/jquery.easing.1.3.js"></script>
     <script src="./js/plugin/jquery.nicescroll.min.js"></script>
     <script src="./js/plugin/jquery.slides.js"></script>
-    <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
     <script src="./js/plugin/glitch-effect-script.js"></script>
+    <!-- <script src="./js/plugin/parallax.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="./js/main.js"></script>
     <!--[if It IE 9] <script src="js/respond.min.js"></script> <[endif]-->
 
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="favicon" href="" type="image/x-icon">
 </head>
-<style>
-    /* youtube플레이어 화면에 꽉차게 하는 css */
-    /* #youTubePlayer1 {position:relative;width:100%;padding-bottom:56.25%;}
-    #youTubePlayer1 iframe {position:absolute;width:100%;height:100%;} */
-</style>
+
 <body>
 
 
@@ -191,11 +189,11 @@
         </div>
 
         <!-- Bryan Popup-->
-        <div id="scene05" class="popup">
-            <div class="close" style="z-index: 900;"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
+        <div id="scene05" class="popup" >
+            <div class="close"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
             <section style="display: flex; box-sizing: content-box;">
                 <!-- left -->
-                <article class="scroll_left" style="width: 766px; margin-left: 78px;">
+                <article class="scroll_left" style="width: 766px; background-color: black; z-index: 200;">
                     <div class="left1" style="margin-top: 273px;"><a href="#"><img src="./image/cast/cast&gallary-t1.png" alt="title"> </a> </div>
                     <div class="left2" style="margin-top: 90px;"><a href="#"><img src="./image/cast/cast&gallary-t2.png" alt="text"> </a> </div>
                     <div class="left3" style="margin-top: 252px;"><a href="#"><img src="./image/cast/cast&gallary-t3.png" alt="text"> </a> </div>
@@ -206,10 +204,16 @@
 
                 <!-- right -->
                 <article class="scroll_right" style="position: fixed; top: 0px; right: 0;">
-                    <div class="right_first scroll_content" style="position: relative; width: 1152.98px; height: 1010.97px; background: url(./image/cast/cast&gallary-m1.jpg) no-repeat;">
-                        <div class="king_text"><a href="#"><img src="./image/cast/cast&gallary-01-king1.png" alt="text"> </a> </div>
-                        <div class="king_text" style="margin-top: 20px;"><a href="#"><img src="./image/cast/cast&gallary-01-king2.png" alt="text"> </a> </div>
-                        <div class="king_text" style="margin-top: 20px;"><a href="#"><img src="./image/cast/cast&gallary-01-king3.png" alt="text"> </a> </div>
+                    <div id="right_king_text" class="right_first scroll_content" style="width: 1152.98px; height: 1010.97px; background: url(./image/cast/cast&gallary-m1.jpg) no-repeat;">
+                        <div style="position: relative; height: 323px;">
+                            <div id="king_text1" class="king_text" style="position: absolute; z-index: 100;"><a href="#"><img src="./image/cast/cast&gallary-01-king1.png" alt="text"> </a> </div>
+                        </div>
+                        <div style="position: relative; height: 323px; margin-top:20px;">
+                            <div id="king_text2" class="king_text" style="position: absolute; z-index: 100;"><a href="#"><img src="./image/cast/cast&gallary-01-king2.png" alt="text"> </a> </div>
+                        </div>
+                        <div style="position: relative; height: 323px; margin-top:20px;">
+                            <div id="king_text3" class="king_text" style="position: absolute; z-index: 100;"><a href="#"><img src="./image/cast/cast&gallary-01-king3.png" alt="text"> </a> </div>
+                        </div>
                     </div>
                     <div class="right_second scroll_content" style="position: relative; display: flex;">
                         <div>
@@ -232,7 +236,10 @@
             </section>
         </div>
         <!-- //Bryan Popup-->
-            
+
+
+
+        <!-- //episode1 Popup-->
         <div id="scene06" class="popup">
             <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
                 <defs>
@@ -243,16 +250,18 @@
                 </defs>
             </svg>
 
-            <div class="close" style="position: fixed;"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
-            <section class="1st_floor" style="display: flex;">
+            <div class="close"><a href="#"><img src="./image/close.png" alt="close"></a> </div>
+
+            <section class="floor1">
                 <article class="scene06_main">
-                    <div class="scene06_div_main"><a href="#"><img src="./image/episode/episode-1-1.png" alt="main"> </a> </div>
+                    <div class="scene06_main_text"><a href="#"><img src="./image/episode/episode-main-text.png" alt="main"> </a> </div>
+                    <div class="scene06_main_title"><a href="#"><img src="./image/episode/episode-title.png" alt="main"> </a> </div>
                 </article>
 
                 <article class="scene06_title">
-                    <div class="scene06_div_title"><a href="#"><img src="./image/episode/episode-heiesnberg.png" alt="title"> </a> </div>
-                    <div class="scene06_div_title"><a href="#"><img src="./image/episode/episode-hei-by.png" alt="title"> </a> </div>
-                    <div class="scene06_div_title"><a href="#"><img src="./image/episode/episode-hei-text.png" alt="title_text"> </a> </div>
+                    <div class="scene06_title_heiesnberg"><a href="#"><img src="./image/episode/episode-heiesnberg.png" alt="title"> </a> </div>
+                    <div class="scene06_title_hei-by"><a href="#"><img src="./image/episode/episode-hei-by.png" alt="title"> </a> </div>
+                    <div class="scene06_title_title"><a href="#"><img src="./image/episode/episode-hei-text.png" alt="title_text"> </a> </div>
                 </article>
 
                 <article class="scene06_photo3">
@@ -262,81 +271,35 @@
                 </article>
 
                 <article class="scene06_text">
-                    <div class="scene06_div_text"><a href="#"><img src="./image/episode/episode-bluesky.png" alt="text"> </a> </div>
+                    <div class="scene06_div_text1"><a href="#"><img src="./image/episode/episode-bluesky-1.png" alt="text"> </a> </div>
+                    <div class="black_box"></div>
+                    <div class="scene06_div_text2"><a href="#"><img src="./image/episode/episode-bluesky-2.png" alt="text"> </a> </div>
+                    <div class="black_box"></div>
+                    <div class="scene06_div_text3"><a href="#"><img src="./image/episode/episode-bluesky-3.png" alt="text"> </a> </div>
                 </article>
 
                 <article class="scene06_jessi">
-                    <div class="scene06_div_jessi"><a href="#"><img src="./image/episode/episode-jessi-pure.png" alt="photo"> </a> </div>
-                    <div class="scene06_div_jessi"><a href="#"><img src="./image/episode/episode-jessi-text.png" alt="text"> </a> </div>
+                    <div class="scene06_jessi_pure"><a href="#"><img src="./image/episode/episode-jessi-pure.png" alt="photo"> </a> </div>
+                    <div class="scene06_jessi_text"><a href="#"><img src="./image/episode/episode-jessi-text.png" alt="text"> </a> </div>
                 </article>
 
                 <article class="scene06_photo2">
                     <div class="scene06_div_photo2_1" style="filter: url(#filter);"><a href="#"><img src="./image/episode/episode-2-1.png" alt="photo"> </a> </div>
-                    <!-- <div class="scene06_div_photo2"><a href="#"><img src="./image/episode/episode-2-2.png" alt="photo"> </a> </div> -->
-                    <div class="scene06_div_photo2" style="height: 495.984px">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HhesaQXLuRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <div class="scene06_div_photo2"><a href="#"><img src="./image/episode/episode-2-2.png" alt="photo"> </a> </div>
+<!--                    <div class="scene06_div_photo2" style="height: 495.984px">-->
+<!--                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HhesaQXLuRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--                    </div>-->
                 </article>
             </section>
         </div>
+        <!-- //episode1 Popup-->
+
+
 
     </div><!--    wrap end-->
 </div>
 
-<script>
-    /*
-    <div id="youTubePlayer1"></div><!-- 플레이어를 불러올 영역-->
-    <div class="btn_play">시작</div><!-- 시작버튼-->
-    <div class="btn_stop">정지</div><!-- 정지버튼-->
-    <div class="btn_pause">일시정지</div> <!-- 일시정지버튼-->
 
-
-    // youtube API 불러옴
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/HhesaQXLuRY";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // 플레이어변수 설정
-    var youTubePlayer1;
-
-    function onYouTubeIframeAPIReady() {
-        youTubePlayer1 = new YT.Player('youTubePlayer1', {
-            width: '1000',
-            height: '563',
-            videoId: 'HhesaQXLuRY',
-            playerVars: {rel: 0},//추천영상 안보여주게 설정
-            events: {
-            'onReady': onPlayerReady, //로딩할때 이벤트 실행
-            'onStateChange': onPlayerStateChange //플레이어 상태 변화시 이벤트실행
-            }
-        });//youTubePlayer1셋팅
-    }
-
-    function onPlayerReady(event) {
-        event.target.playVideo();//자동재생
-        //로딩할때 실행될 동작을 작성한다.
-    }
-
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
-            //플레이어가 재생중일때 작성한 동작이 실행된다.
-        }
-    }
-    
-    $(document).ready(function () {
-        $(".btn_play").on("click", function () {
-            youTubePlayer1.playVideo();//재생
-        });
-        $(".btn_stop").on("click", function () {
-            youTubePlayer1.stopVideo();//정지
-        });
-        $(".btn_pause").on("click", function () {
-            youTubePlayer1.pauseVideo();//일시정지
-        });
-    });
-    */
-</script>
 
 </body>
 </html>
